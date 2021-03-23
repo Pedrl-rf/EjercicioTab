@@ -1,11 +1,10 @@
 package com.example.ejerciciotab.Frames;
 
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-public class ListaEquipos implements Parcelable {
+public class ListaEquipos  {
 
     public int imagenEquipo;
     public String nombreEquipo ;
@@ -14,6 +13,24 @@ public class ListaEquipos implements Parcelable {
         this.imagenEquipo = imagenEquipo;
         this.nombreEquipo = nombreEquipo;
     }
+
+
+    /*protected ListaEquipos() {
+        imagenEquipo = in.readInt();
+        nombreEquipo = in.readString();
+    }
+
+    public static final Creator<ListaEquipos> CREATOR = new Creator<ListaEquipos>() {
+        @Override
+        public ListaEquipos createFromParcel(Parcel in) {
+            return new ListaEquipos(in);
+        }
+
+        @Override
+        public ListaEquipos[] newArray(int size) {
+            return new ListaEquipos[size];
+        }
+    };*/
 
 
     public int getImagenEquipo() {
@@ -32,12 +49,7 @@ public class ListaEquipos implements Parcelable {
         this.nombreEquipo = nombreEquipo;
     }
 
-    protected ListaEquipos(Parcel in) {
-        imagenEquipo = in.readInt();
-        nombreEquipo = in.readString();
-    }
-
-    @Override
+/*    @Override
     public int describeContents() {
         return 0;
     }
@@ -46,18 +58,5 @@ public class ListaEquipos implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(imagenEquipo);
         dest.writeString(nombreEquipo);
-    }
-
-    @SuppressWarnings("unused")
-    public static final Parcelable.Creator<ListaEquipos> CREATOR = new Parcelable.Creator<ListaEquipos>() {
-        @Override
-        public ListaEquipos createFromParcel(Parcel in) {
-            return new ListaEquipos(in);
-        }
-
-        @Override
-        public ListaEquipos[] newArray(int size) {
-            return new ListaEquipos[size];
-        }
-    };
+    }*/
 }
